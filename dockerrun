@@ -1,0 +1,6 @@
+docker build -t elasticsearch-dump -f Dockerfile .
+docker run -d --name elasticsearch-dump elasticsearch-dump
+
+docker tag elasticsearch-dump:latest nattatorn/elasticsearch-dump:v1
+
+docker push nattatorn/elasticsearch-dump:v1

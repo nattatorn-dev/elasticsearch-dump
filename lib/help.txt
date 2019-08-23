@@ -217,6 +217,8 @@ Usage: elasticdump --input SOURCE --output DESTINATION [OPTIONS]
                     Socks5 host address
 --inputSocksPort, --outputSocksPort
                     Socks5 host port
+--timestamp
+                    create file with timestamp
 --help
                     This page
 

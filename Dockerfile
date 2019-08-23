@@ -1,6 +1,10 @@
 FROM node:10-alpine
-LABEL maintainer="evan@evantahler.com"
 
-RUN npm install elasticdump -g
+WORKDIR /usr/bin
 
-ENTRYPOINT ["elasticdump"]
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+ENTRYPOINT ["bin/elasticdump"]
